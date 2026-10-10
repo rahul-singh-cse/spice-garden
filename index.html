@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover delicious food at Spice Garden. Explore our menu and order your favourites.">
+  <title>Spice Garden | Fresh & Delicious</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">🌿 Spice Garden</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cart-link" href="#cart">🛒 Cart <span id="cart-count">0</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">FRESH INGREDIENTS · GREAT TASTE</p>
+        <h1>Good food.<br>Good mood.</h1>
+        <p>Delicious meals made with love, fresh ingredients and a little bit of spice.</p>
+        <a href="#menu" class="btn">Explore Our Menu →</a>
+      </div>
+      <div class="hero-image" role="img" aria-label="Delicious Indian food"></div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">MADE FRESH FOR YOU</p>
+        <h2>Our Popular Menu</h2>
+        <p>Find something delicious for every craving.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Starters">Starters</button>
+        <button class="filter" data-category="Main Course">Main Course</button>
+        <button class="filter" data-category="Drinks">Drinks</button>
+      </div>
+
+      <div class="food-grid" id="food-grid"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="eyebrow">OUR STORY</p>
+        <h2>Made with love,<br>served with a smile.</h2>
+      </div>
+      <p>At Spice Garden, we believe great food brings people together.
+        Our sample menu celebrates comforting flavours, fresh ingredients
+        and memorable meals.</p>
+    </section>
+
+    <section class="section cart-section" id="cart">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR SELECTION</p>
+        <h2>Your Order</h2>
+      </div>
+      <div id="cart-items" class="cart-items">
+        <p>Your cart is empty. Add something delicious!</p>
+      </div>
+      <div class="cart-total">
+        <strong>Total</strong>
+        <strong id="cart-total">₹0</strong>
+      </div>
+      <button class="btn" id="order-btn">Order on WhatsApp</button>
+      <p class="small-note">Demo website: no payment is collected here.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <p class="eyebrow">COME SAY HELLO</p>
+      <h2>Good food is waiting.</h2>
+      <p>Visit us or contact us to learn more about our menu.</p>
+      <a href="mailto:hello@example.com" class="btn btn-light">Contact Restaurant</a>
+      <p class="small-note">Demo contact details — replace before publishing.</p>
+    </section>
+    <!-- Checkout Section -->
+    <section id="checkout" class="checkout-section">
+      <div class="checkout-box">
+        <p class="eyebrow">ALMOST THERE</p>
+        <h2>Checkout</h2>
+        <p>Enter your details to continue.</p>
+
+        <form id="checkout-form">
+          <label for="customer-name">Full Name</label>
+          <input
+            type="text"
+            id="customer-name"
+            placeholder="Enter your name"
+            required
+          >
+
+          <label for="customer-phone">Phone Number</label>
+          <input
+            type="tel"
+            id="customer-phone"
+            placeholder="10-digit mobile number"
+            pattern="[0-9]{10}"
+            required
+          >
+
+          <label for="customer-address">Delivery Address</label>
+          <textarea
+            id="customer-address"
+            placeholder="Enter your full address"
+            required
+          ></textarea>
+
+          <h3>Total: <span id="checkout-total">₹0</span></h3>
+
+          <button type="submit" class="btn">
+            Continue to Payment
+          </button>
+        </form>
+
+        <div id="payment-demo" hidden>
+          <h3>Payment Demo</h3>
+          <p>No real money will be charged.</p>
+          <button type="button" class="btn" id="demo-pay-btn">
+            Pay Now (Demo)
+          </button>
+        </div>
+
+        <p id="checkout-message" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">🌿 Spice Garden</a>
+    <p>Made with ❤️ for food lovers.</p>
+    <p>© <span id="year"></span> Spice Garden</p>
+  </footer>
+</body>
+</html>

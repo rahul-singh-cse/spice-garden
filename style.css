@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --dark: #171b16;
+  --green: #294c35;
+  --orange: #e5a044;
+  --cream: #faf7f0;
+  --muted: #77796f;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Navigation */
+nav, .navbar, header {
+  background: var(--dark);
+  color: var(--white);
+}
+
+nav, .navbar {
+  min-height: 76px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+nav a, .navbar a {
+  transition: color .25s ease;
+}
+
+nav a:hover, .navbar a:hover {
+  color: var(--orange);
+}
+
+/* Main banner */
+.hero {
+  min-height: 560px;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(15, 22, 16, .88), rgba(15, 22, 16, .25)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85')
+    center/cover no-repeat;
+}
+
+.hero h1 {
+  max-width: 760px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 540px;
+  font-size: 18px;
+  color: #f1eee6;
+  margin-bottom: 28px;
+}
+
+/* Buttons */
+button, .btn, .button, .hero a {
+  transition: transform .2s ease, background .2s ease;
+}
+
+.btn, .button, .hero a {
+  display: inline-block;
+  background: var(--orange);
+  color: #211a10;
+  padding: 13px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.btn:hover, .button:hover, .hero a:hover {
+  transform: translateY(-2px);
+  background: #f1b65e;
+}
+
+button {
+  border-radius: 6px;
+}
+
+/* Section headings */
+section {
+  padding: 76px 7%;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+section h2 + p {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+/* Menu layout */
+#menu {
+  background: var(--cream);
+}
+
+#menu h2 {
+  text-align: center;
+}
+
+#menu > p {
+  text-align: center;
+}
+
+#menu .menu-grid,
+#menu .food-grid,
+.menu-grid,
+.food-grid,
+#menu .menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 26px;
+  margin-top: 34px;
+}
+
+/* Food cards */
+.food-card, .menu-card, .menu-item, .food-item,
+#menu .card {
+  background: var(--white);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(30, 35, 25, .07);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.food-card:hover, .menu-card:hover, .menu-item:hover,
+.food-item:hover, #menu .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(30, 35, 25, .12);
+}
+
+.food-card img, .menu-card img, .menu-item img,
+.food-item img, #menu .card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.food-card h3, .menu-card h3, .menu-item h3,
+.food-item h3, #menu .card h3 {
+  font-size: 19px;
+  padding: 16px 18px 4px;
+}
+
+.food-card p, .menu-card p, .menu-item p,
+.food-item p, #menu .card p {
+  padding: 0 18px 12px;
+  color: var(--muted);
+}
+
+.food-card button, .menu-card button, .menu-item button,
+.food-item button, #menu .card button {
+  margin: 4px 18px 20px;
+  padding: 10px 16px;
+  background: var(--green);
+  color: white;
+  border: none;
+}
+
+.food-card button:hover, .menu-card button:hover,
+.menu-item button:hover, .food-item button:hover {
+  background: #396646;
+}
+
+/* Category filters */
+.filter-buttons, .category-buttons, .menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.filter-buttons button, .category-buttons button,
+.menu-filters button {
+  padding: 10px 18px;
+  background: white;
+  color: var(--green);
+  border: 1px solid #d9dfd4;
+}
+
+.filter-buttons button:hover, .category-buttons button:hover,
+.menu-filters button:hover {
+  background: var(--green);
+  color: white;
+}
+
+/* About section */
+#about {
+  background: #eeeadf;
+}
+
+#about p {
+  max-width: 760px;
+  color: #565b51;
+  font-size: 17px;
+}
+
+/* Cart and contact */
+#cart {
+  background: white;
+}
+
+#cart button, #contact button {
+  padding: 12px 20px;
+  border: none;
+  background: var(--green);
+  color: white;
+}
+
+#contact {
+  background: #eae8dc;
+}
+
+#contact input, #contact textarea,
+#contact select {
+  width: 100%;
+  max-width: 520px;
+  padding: 13px 15px;
+  margin: 8px 0;
+  border: 1px solid #d7d6ca;
+  border-radius: 6px;
+  background: white;
+}
+
+#contact input:focus, #contact textarea:focus {
+  outline: 2px solid var(--orange);
+  border-color: transparent;
+}
+
+/* Footer */
+footer {
+  padding: 28px 7%;
+  background: var(--dark);
+  color: #e9e8df;
+  text-align: center;
+}
+
+/* Mobile and tablet */
+@media (max-width: 700px) {
+  nav, .navbar {
+    padding: 14px 5%;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  nav ul, .navbar ul {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 470px;
+    padding: 70px 6%;
+    background-position: center;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  #menu .menu-grid,
+  #menu .food-grid,
+  .menu-grid,
+  .food-grid,
+  #menu .menu-items {
+    grid-template-columns: 1fr;
+  }
+}
+/* Spice Garden - Professional UI Upgrade */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #26352b;
+  background: #fffdf8;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.food-card {
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.13);
+}
+
+.food-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.food-card h3,
+.food-card p {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.food-card button,
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 10px 16px 16px;
+  background: #28643b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.food-card button:hover,
+.btn:hover {
+  background: #194728;
+}
+
+.checkout-box {
+  width: min(90%, 520px);
+  margin: 0 auto;
+  padding: 28px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-box input,
+.checkout-box textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 8px 0 18px;
+  padding: 12px;
+  border: 1px solid #d6ddd5;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.checkout-box input:focus,
+.checkout-box textarea:focus {
+  outline: 2px solid #80a98a;
+  border-color: #28643b;
+}
+
+#payment-demo {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 12px;
+  background: #f0f7ef;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 32px 16px;
+  }
+
+  .food-card img {
+    height: 180px;
+  }
+
+  .checkout-box {
+    padding: 20px;
+  }
+}
