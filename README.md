@@ -5,15 +5,22 @@ A responsive restaurant website built with HTML, CSS and JavaScript.
 ## Live Demo
 https://rahul-singh-cse.github.io/spice-garden/
 
+## Screenshots
+
+![Home Page](screenshot-home.png)
+
+![Menu Section](screenshot-menu.png)
+
 ## Tech Stack
 - HTML5
 - CSS3
 - JavaScript
 
 ## Features
-- Clean and responsive design
-- Restaurant menu and information
-- Easy to navigate layout
+- Responsive restaurant landing page with hero section
+- Menu with category filters (Starters, Main Course, Drinks)
+- Add to Cart functionality with live cart counter
+- Clean and modern UI
 
 ## How to Run Locally
 1. Clone the repo:
